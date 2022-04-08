@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--red);
+    background-image: url('./images/bg-intro-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--grayish-blue);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.row_1 {
+    margin: 80px auto 60px auto;
+    width: 330px;
+}
+
+.col_1 {
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+.col_1 .title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.col_1 .description {
+    font-size: 14px;
+    letter-spacing: .3px;
+    padding: 0 23px;
+}
+
+.col_2 {
+    margin-top: 60px;
+}
+
+.col_2 .trial_ad {
+    background-color: var(--blue);
+    border-radius: 10px;
+    box-shadow: 0 8px 0 hsla(249, 10%, 26%, .3);
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    letter-spacing: .3px;
+    margin-bottom: 25px;
+    padding: 20px 55px;
+    text-align: center;
+}
+
+.col_2 .trial_ad span {
+    font-weight: 700;
+}
+
+.col_2 .trial_form {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 8px 0 hsla(249, 10%, 26%, .3);
+    padding: 21px;
+}
+
+.col_2 .trial_form .form_group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.col_2 .trial_form .form_group label {
+    display: none;
+}
+
+.col_2 .trial_form .form_group input {
+    border: 1px solid hsla(246, 25%, 77%, .5);
+    border-radius: 6px;
+    color: var(--dark-blue);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px;
+    width: 100%;
+}
+
+.col_2 .trial_form .form_group.error input {
+    color: var(--red);
+}
+
+.col_2 .trial_form .form_group input:focus {
+    outline: 1px solid var(--dark-blue);
+}
+
+.col_2 .trial_form .form_group.error input {
+    border: 1px solid var(--red);
+}
+
+.col_2 .trial_form .form_group .icon_error {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}
+
+.col_2 .trial_form .form_group.error .icon_error {
+    display: block;
+}
+
+.col_2 .trial_form .form_group .message {
+    color: var(--red);
+    display: none;
+    font-size: 10px;
+    font-style: italic;
+    padding-top: 6px;
+    text-align: right;
+}
+
+.col_2 .trial_form .form_group.error .message {
+    display: block;
+}
+
+.col_2 .trial_form .submit_btn {
+    background-color: var(--green);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 0 rgb(24, 129, 84);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+    opacity: 1;
+    padding: 15px 0;
+    text-transform: uppercase;
+    transition: opacity .3s ease-in-out;
+    width: 100%;
+}
+
+.col_2 .trial_form .submit_btn:hover {
+    opacity: .8;
+}
+
+.col_2 .trial_form .terms {
+    color: var(--grayish-blue);
+    font-size: 10px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.col_2 .trial_form .terms span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.attribution {
+    color: var(--blue);
+    font-size: 10px;
+    position: sticky;
+    text-align: center;
+    top: 100vh;
+}
+
+.attribution a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+.attribution a:active, .attribution a:hover {
+    color: var(--green);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url('./images/bg-intro-desktop.png');
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    .row_1 {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 50%;transform: translateY(-50%);
+        width: 1150px;
+    }
+
+    .col_1, .col_2 {
+        flex: 0 1 49.9%;
+    }
+
+    .col_1 {
+        text-align: left;
+    }
+
+    .col_1 .title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .col_1 .description {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .col_2 {
+        margin-top: 0;
+        padding: 0 30px;
+    }
+
+    .col_2 .trial_form {
+        padding: 40px;
+    }
+}
